@@ -36,8 +36,7 @@ export class FileUploadComponent implements OnInit {
          else
          {
            this.yes();
-         }
-         //this.getFol();
+         }         //this.getFol();
        
     };
   }
