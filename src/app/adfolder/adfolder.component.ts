@@ -44,8 +44,7 @@ export class AdfolderComponent implements OnInit {
       });;
   }
 
- 
-
+  
  myFunction() 
  {
   //console.log(this.loginmodel);
@@ -55,7 +54,7 @@ export class AdfolderComponent implements OnInit {
   this.txt =  person ;
   
   if (person == null || person == "") {
-    
+
   } 
   /*else if(this.array[].contains(this.txt))
   {
@@ -63,17 +62,18 @@ export class AdfolderComponent implements OnInit {
   }*/
   else 
   {
-    for (var i = 0; i < this.array.length; i++)
+    //let text1;
+    for (var i = 0; i <= this.array.length; i++)
     {
       if(this.array[i] == this.txt)
       {
-        alert('Folder exists');
+        alert('Folder exists.');
+        
       }
     }
-    for (let i =0 ; i < 1; i++)
-    {
+
       this.array.push(person);
-    }
+    
     this.textchange();
     //this.text1 = txt;
     let button = document.createElement('button');

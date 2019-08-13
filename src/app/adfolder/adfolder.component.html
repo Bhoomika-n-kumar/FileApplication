@@ -5,15 +5,23 @@
 
 <ul>
     <li><a href="#logout" routerLink = "/login">Logout</a></li>  
+    <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#"> 1</a>
+    </div>
+  </div> 
     <li  style = "margin-right:1020px; margin-top:12px;font-size:18px;color:white;"> Welcome, {{getUser}} !</li>
 </ul>
 
 <br><br>
 
+<div id = "route" routerLink = '/filUpload' ></div>
 <div style = "border-style: dotted; width:90px; margin-left:20px;height:67px;">
 <button (click) = "myFunction()" name = "button1" class = "btn" style = "outline:none"> <i class="fa fa-folder"></i>  Add folder </button> <br/><br/>
 </div>
-<div id = "route" routerLink = '/filUpload' ></div>
 <p id = "folder" style = "color:#9e9c96;margin-left:20px;margin-top:20px;">No folders created</p>
 
 
