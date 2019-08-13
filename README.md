@@ -17,8 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Angular 7  
 Typescript  
-NodeJs  
-
+NodeJs.  
 
 ## App server 
 
