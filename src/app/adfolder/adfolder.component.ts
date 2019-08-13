@@ -18,6 +18,7 @@ export class AdfolderComponent implements OnInit {
   dummy:any = "heelo";
   loginmodel;
   public array = [];
+  data: any;
 
   constructor(private logSer : LoginService, private router: Router, private share: SharingService) { }
 
@@ -44,7 +45,7 @@ export class AdfolderComponent implements OnInit {
       });;
   }
 
-  
+
  myFunction() 
  {
   //console.log(this.loginmodel);
