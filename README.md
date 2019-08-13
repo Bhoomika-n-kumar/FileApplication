@@ -1,27 +1,38 @@
-# UploadNDisplay
+# Title
 
+Basic File Application Management.  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+ 
+## Description
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. 
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The project is about uploading files into the folder.  
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build. 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies used
 
-## Running end-to-end tests
+Angular 7  
+Typescript  
+NodeJs  
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## App server 
 
-## Further help
+json server is used for posting the form data. Install json using the following command
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+` npm install json-server -g` 
+
+Start the json server using the command `json-server --watch db.json`  
+
+Node.js is used for setting up the backend. Install the following modules 
+
+` npm install express multer body-parser --save`  
+
+` npm install nodemon --save -dev`
+
+Start the server using the command `node server`
+
+
