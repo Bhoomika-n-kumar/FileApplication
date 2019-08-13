@@ -1,6 +1,6 @@
 # Title
 
-Basic File Application Management.  
+Basic File Management Application.  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
  
 ## Description
