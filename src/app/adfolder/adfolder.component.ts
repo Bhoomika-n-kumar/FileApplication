@@ -16,8 +16,8 @@ export class AdfolderComponent implements OnInit {
   getUser:any;
   txt: any;
   dummy:any = "heelo";
-
   loginmodel;
+  public array = [];
 
   constructor(private logSer : LoginService, private router: Router, private share: SharingService) { }
 
@@ -52,13 +52,29 @@ export class AdfolderComponent implements OnInit {
   //this.message1 = this.loginmodel.username;
   //let txt:string;
   let person:string = prompt("Please enter folder name:");
+  this.txt =  person ;
+  
   if (person == null || person == "") {
     
   } 
+  /*else if(this.array[].contains(this.txt))
+  {
+
+  }*/
   else 
   {
+    for (var i = 0; i < this.array.length; i++)
+    {
+      if(this.array[i] == this.txt)
+      {
+        alert('Folder exists');
+      }
+    }
+    for (let i =0 ; i < 1; i++)
+    {
+      this.array.push(person);
+    }
     this.textchange();
-    this.txt =  person ;
     //this.text1 = txt;
     let button = document.createElement('button');
     let b = document.createTextNode(this.txt + ' ');
@@ -75,5 +91,6 @@ export class AdfolderComponent implements OnInit {
     document.getElementById('folder').innerHTML = '';
   }
 
+ 
 
 }
