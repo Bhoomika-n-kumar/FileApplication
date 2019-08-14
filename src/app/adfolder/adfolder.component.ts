@@ -22,7 +22,8 @@ export class AdfolderComponent implements OnInit {
 
   constructor(private logSer : LoginService, private router: Router, private share: SharingService) { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
     /*old this.loginmodel = this.logSer.getData(); old*///.subscribe(data => {this.loginmodel = data});
     //this.getAllUser();
     this.getDataCom();
@@ -79,7 +80,9 @@ export class AdfolderComponent implements OnInit {
     //this.text1 = txt;
     let button = document.createElement('button');
     let b = document.createTextNode(this.txt + ' ');
-    button.setAttribute('style','margin-left:20px; margin-top:20px; border-radius:5px; display:block; width:100px; background-color:#d1dade');
+    button.setAttribute('style','outline:none; border:none; cursr: pointer; margin-left:20px; margin-top:20px; height :30px ; display:block; width:90px; background-color:#d1dade;');
+    let css = "button:hover { background-color: #989fab} ";
+    button.setAttribute('class','route1');
     var router = document.getElementById("route");
     router.appendChild(button);
     button.appendChild(b);    
@@ -92,6 +95,27 @@ export class AdfolderComponent implements OnInit {
     document.getElementById('folder').innerHTML = '';
   }
 
- 
+  
 
+// Declare a loop variable
+
+
+// List View
+ listView() {
+  var elements = document.getElementsByClassName("route1");
+  var i;
+  for (i = 0; i < elements.length; i++) 
+  {
+    elements[i].setAttribute('style','outline:none; border:none; cursr: pointer; margin-left:20px; margin-top:10px; height :30px ; display:block; background-color:#d1dade;width:1000px;text-align:left; padding:5px;');
+  }
+}
+
+// Grid View
+ gridView() {
+  var elements = document.getElementsByClassName("route1");
+  var i;
+  for (i = 0; i < elements.length; i++) {
+    elements[i].setAttribute('style','outline:none; border:none; cursr: pointer; margin-left:20px; margin-top:10px; height :67px ; display:inline; background-color:#d1dade;width:90px;text-align:center; padding:5px;');
+  }
+}
 }
