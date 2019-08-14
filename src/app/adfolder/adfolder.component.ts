@@ -114,7 +114,8 @@ export class AdfolderComponent implements OnInit {
  gridView() {
   var elements = document.getElementsByClassName("route1");
   var i;
-  for (i = 0; i < elements.length; i++) {
+  for (i = 0; i < elements.length; i++) 
+  {
     elements[i].setAttribute('style','outline:none; border:none; cursr: pointer; margin-left:20px; margin-top:10px; height :67px ; display:inline; background-color:#d1dade;width:90px;text-align:center; padding:5px;');
   }
 }
