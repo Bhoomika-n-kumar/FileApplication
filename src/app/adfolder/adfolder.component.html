@@ -4,9 +4,12 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+
 <div class="navbar">
+    <p  style = "margin-top:10px;font-size:18px;color:white;"> Welcome, {{getUser}} !</p>
   <div class="dropdown">
-    <button class="dropbtn"  >Dropdown 
+    <button class="dropbtn"  >View 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -17,72 +20,28 @@
   <a class = "a" href="#logout" routerLink = "/login">Logout</a>
 </div>
 
-<button routerLink = '/adFile' >go</button>
-
-<!----<ul>
-    <li><a href="#logout" routerLink = "/login">Logout</a></li>  
-    <div class="dropdown" style = "margin-left:1100px;">
-      <button class="dropbtn" style = "height:50px;">View</button>
-      <div class="dropdown-content">
-        <button class="btn1" (click)="listView()"><i class="fa fa-bars"></i> List</button>
-        <button class="btn2" (click)="gridView()"><i class="fa fa-th-large"></i> Grid</button>
-      </div>
-    </div>-->
-    <!----<div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#"> 1</a>
-    </div>
-  </div> -->
-    <!----<li  style = "margin-right:1020px; margin-top:12px;font-size:18px;color:white;"> Welcome, {{getUser}} !</li>
-</ul>-->
+<!----<button routerLink = '/adFile' >go</button>-->
 
 <br><br>
 
-<div id="btnContainer">
+<!----<div id="btnContainer">
   <button class="btn1" (click)="listView()"><i class="fa fa-bars"></i> List</button> 
   <button class="btn2" (click)="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+</div>-->
+
+
+<div id = "div1" *ngFor = "let t of array1" >
+    <button routerLink = '/filUpload' id = "arrayBtn" class = "route1"  style = "outline:none; border:none; cursor: pointer; margin-top:20px; margin-left:20px; height :30px ;  width:90px; background-color:#d1dade;">{{t}}</button>
 </div>
 
-<div style = "border-style: dotted; width:90px; margin-left:20px;height:67px;">
-<button (click) = "myFunction()" name = "button1" class = "btn" style = "outline:none"> <i class="fa fa-folder"></i>  Add folder </button> <br/><br/>
+<div id = "div2" >
+    <button class = "folder" id = "fold" (click) = "myFunction1()" name = "button1" class = "btn" style = "outline:none;"> <i class="fa fa-folder"></i>  Add folder </button> <br/><br/>
 </div>
+
 
 <div id = "route" routerLink = '/filUpload' ></div>   
 
-
-<!----<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
-  </div>
-</div>-->
-
-<!----<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2>Column 3</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2>Column 4</h2>
-    <p>Some text..</p>
-  </div>
-</div>-->
-
-
-<p id = "folder" style = "color:#9e9c96;margin-left:20px;margin-top:20px;">No folders created</p>
-
-
-<!--<div *ngIf = "comment"></div>  
-<button >
-<p id="demo"></p>
-</button>-->
+<p id = "folder" style = "color:#9e9c96;margin-left:20px;margin-top:80px;">No folders created</p>
 
 
 <!--style to be added to button style = "margin-left:20px; width:80px; height:80px; border-style: dotted; background-color:#d1dade"-->
