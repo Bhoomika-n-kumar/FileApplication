@@ -35,7 +35,6 @@ export class SharingService {
     return this.Folder;
   }
 
- 
 
 }
 

@@ -27,40 +27,34 @@ export class LoginComponent implements OnInit {
   {
     console.log(this.login.currentUser);
     alert(this.login.currentUser.username + ' is logged in');
-    this.message  = this.login.currentUser.username;
+    //this.message  = this.login.currentUser.username;
     //this.share.setData(this.login.currentUser.username);
- 
-  let txt:string;
-  
-    let label1 = document.createElement('label');
-    label1.setAttribute('style','margin-top:0px;');
-    document.body.appendChild(label1);
+    //let label1 = document.createElement('label');
+    //label1.setAttribute('style','margin-top:0px;');
+    //document.body.appendChild(label1);
     /*welcometext txt =  this.login.currentUser.username ;
     let b = document.createTextNode("Welcome " + txt);
     label1.appendChild(b);*/
     //let link = document.createAttribute('routerLink');
-    
-  } 
-
+    } 
 
   create(user: Login)
   {
     this.login.createUser(user).subscribe();
   }
 
-  setDataCom(user: string)
+  /* not needed setDataCom(user: string)
   {
-    //let user = this.login.currentUser.username;
+    let user = this.login.currentUser.username;
     this.login.setData(user);
     console.log('yes');
-  }
+  }*/
 
-  clearUser(currentUser: Login) {
-    this.login.currentUser = {
-      
-      username: '',
+  clearUser() {    
+    this.login.currentUser = { 
+      id: null,
+      username: '', 
       password: ''
-      
     }
-  }
+  } 
 }

@@ -13,6 +13,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
 import { FileSelectDirective } from 'ng2-file-upload';
 import { FileUploadService } from './file-upload.service';
 import { SharingService } from './sharing.service';
+import { DndDirective } from './dnd.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SharingService } from './sharing.service';
     AdfolderComponent,
     AdFileComponent,
     FileUploadComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    DndDirective
   ],
   imports: [
     BrowserModule,
