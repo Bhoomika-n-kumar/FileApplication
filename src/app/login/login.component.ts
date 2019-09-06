@@ -50,11 +50,11 @@ export class LoginComponent implements OnInit {
     console.log('yes');
   }*/
 
-  clearUser() {    
+  /*clearUser() {    
     this.login.currentUser = { 
       id: null,
       username: '', 
       password: ''
     }
-  } 
+  } */
 }
