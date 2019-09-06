@@ -1,6 +1,5 @@
 // server.js
 
-var path = require('path');
 const express = require('express');
 const multer = require('multer');
 const bodyParser = require('body-parser')
@@ -17,14 +16,14 @@ var corsOptions = {
   optionsSuccessStatus: 200,
 }
  
-let storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, DIR);
-    },
-    filename: (req, file, cb) => {
-      cb(null, file.fieldname + '-' + Date.now() + '.' + /*path.extname(*/file.originalname/*)*/);
-    }
-});
+let storage = multer.diskStorage({ 
+    destination: (req, file, cb) => {  
+      cb(null, DIR); 
+    }, 
+    filename: (req, file, cb) => { 
+      cb(null, file.fieldname + '-' + Date.now() + '.' + /*path.extname(*/file.originalname/*)*/);    
+    }  
+}); 
 
 let upload = multer({storage: storage});
 
@@ -34,9 +33,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Methods', 'POST,GET');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Credentials', true); //to communicate the response to frontend
   next();
 });
  
@@ -45,7 +44,7 @@ app.use(function (req, res, next) {
 });*/
  
 app.post('/start/upload',upload.single('file'), function (req, res) {
-    if (!req.file) {
+    if (!req.file) { //if any file is not upoaded
         console.log("No file received");
         return res.send({
           success: false
@@ -53,6 +52,7 @@ app.post('/start/upload',upload.single('file'), function (req, res) {
     
       } else {
         console.log('file received');
+        console.log(req.file);
         /*return res.send({
           success: true
         })*/
@@ -60,7 +60,8 @@ app.post('/start/upload',upload.single('file'), function (req, res) {
       }
 });
 
- 
+app.post('/start1/upload',upload.single('file'), function (req, res) {  });
+
 const PORT = process.env.PORT || 5000;
  
 app.listen(PORT, function () {
